@@ -9,8 +9,8 @@ const __dirname = dirname(__filename);
 const filePath = path.join(__dirname, 'files', 'fileToCalculateHashFor.txt');
 
 const calculateHash = async () => {
-  const data = await createReadStream(filePath);
-  const hash = await createHash('sha256');
+  const data = createReadStream(filePath);
+  const hash = createHash('sha256');
   data.pipe(hash).setEncoding('hex').on('data', (chunk) => {
     console.log(chunk);
   });
