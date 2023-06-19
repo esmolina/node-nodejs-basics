@@ -6,7 +6,7 @@ import { dirname } from 'node:path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const origPath = path.join(__dirname, 'files');
-const copyPath = path.join(__dirname, 'files');
+const copyPath = path.join(__dirname, 'files_copy');
 const errorMessage = 'FS operation failed';
 
 const copy = async () => {
