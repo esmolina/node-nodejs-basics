@@ -7,7 +7,7 @@ const outputChannel = stdout;
 const transform = async () => {
   const transformer = new Transform({
     objectMode: true,
-    readableObjectMode: true,  // added this
+    readableObjectMode: true,
     writableObjectMode: true,
     transform: function (chunk, encoding, callback) {
       const reversedChunk = chunk.toString().split('').reverse().join('');
